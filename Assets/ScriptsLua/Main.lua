@@ -1,3 +1,5 @@
+local localVariableFromAnotherFile = require("AnotherFile")
+
 Main = {}
 
 local buttonPath = "/Canvas/StartButton"
@@ -10,5 +12,6 @@ function Main.Start()
 end
 
 function Main.StartClick()
-    CS.UnityEngine.Debug.Log("开始点击")
+    CS.UnityEngine.Debug.Log("全局变量a:" .. GlobalVariable.a)
+    CS.UnityEngine.Debug.Log("另外一个文件的本地变量a:" .. localVariableFromAnotherFile.a)
 end
