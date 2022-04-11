@@ -1,5 +1,5 @@
 -- 开启调试
-require("LuaPanda").start("127.0.0.1",8818);
+require("LuaPanda").start("127.0.0.1", 8818)
 
 -- 引用另外一个文件
 local localVariableFromAnotherFile = require("AnotherFile")
