@@ -9,7 +9,18 @@
             "type": "unity",
             "path": "${workspaceFolder}/Library/EditorInstance.json",
             "request": "launch"
+        },
+        {
+            "type": "lua",
+            "request": "launch",
+            "tag": "normal",
+            "name": "LuaPanda",
+            "cwd": "${workspaceFolder}",
+            "luaFileExtension": ".lua",
+            "connectionPort": 8818,
+            "stopOnEntry": true,
+            "useCHook": true,
+            "autoPathMode": true,
         }
-
     ]
 }
