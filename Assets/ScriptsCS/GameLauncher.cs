@@ -52,9 +52,12 @@ public class GameLauncher : MonoBehaviour
     public static byte[] CustomLoader(ref string filepath)
     {
         string scriptPath = string.Empty;
+        // 把reuiqre中点.替换成路径中的/
         filepath = filepath.Replace(".", "/") + ".lua";
+        // 组合LUA脚本根目录, 在Lua脚本根目录中找对应的lua文件
         scriptPath = Path.Combine(Application.dataPath, luaScriptsFolder);
         scriptPath = Path.Combine(scriptPath, filepath);
+        // 读取文件
         return SafeReadAllBytes(scriptPath);
     }
 
